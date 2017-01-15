@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,26 +16,12 @@
 <button id="startbutton">CAPTURE</button>
 
 
-</body>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>JS Workshop</title>
-</head>
-<body>
 
-<video id="video"></video>
-<canvas id="canvas" style="display:none;"></canvas>
-<div id="buttoncontent">
-
-</div>
-
-<div id = "photo"></div>
-<button id="startbutton">CAPTURE</button>
-
-
-</body>
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+ <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+	
 <script type="text/javascript">
 	(function() {
   var streaming = false,
@@ -101,7 +88,7 @@
     startbutton.innerText= "RETAKE";
     canvas.width = width;
     canvas.height = height;
-    canvas.getContext('2d').drawImage(video, 0, 0, width, height);
+    canvas.getContext('2d').drawImage(video, width, 0, 0, height);
     var data = canvas.toDataURL('image/png');
     var imgData = data.replace(/^data:image\/(png|jpg);base64,/, "");
     var postData = JSON.stringify({imageData:imgData});
@@ -309,5 +296,5 @@
 
 })();
 </script>
-
+</body>
 </html>
